@@ -1,3 +1,5 @@
+import 'package:dti_sau_project/views/login_ui.dart';
+import 'package:dti_sau_project/views/signup_ui.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeUi extends StatefulWidget {
@@ -14,7 +16,7 @@ class _WelcomeUiState extends State<WelcomeUi> {
       backgroundColor: Colors.amber,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, 
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
               height: MediaQuery.of(context).size.width * 0.125,
@@ -44,7 +46,7 @@ class _WelcomeUiState extends State<WelcomeUi> {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
-            ), 
+            ),
             SizedBox(
               height: MediaQuery.of(context).size.width * 0.125,
             ),
@@ -52,7 +54,13 @@ class _WelcomeUiState extends State<WelcomeUi> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () {}, 
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LoginUi(),
+                        ));
+                  },
                   child: Text('LOGIN'),
                   style: OutlinedButton.styleFrom(
                     fixedSize: Size(
@@ -65,19 +73,26 @@ class _WelcomeUiState extends State<WelcomeUi> {
                   ),
                 ),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.05,  
+                  width: MediaQuery.of(context).size.width * 0.05,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignupUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'SIGNUP',
                     style: TextStyle(
-                      color: Colors.white,  
+                      color: Colors.white,
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
-                     fixedSize: Size(
+                    fixedSize: Size(
                       MediaQuery.of(context).size.width * 0.3,
                       MediaQuery.of(context).size.height * 0.05,
                     ),
