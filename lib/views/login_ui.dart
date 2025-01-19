@@ -1,5 +1,6 @@
 
 import 'package:dti_sau_project/views/signup_ui.dart';
+import 'package:dti_sau_project/views/welcome_ui.dart';
 import 'package:flutter/material.dart';
 
 class LoginUi extends StatefulWidget {
@@ -25,9 +26,17 @@ class _LoginUiState extends State<LoginUi> {
             ),
             Align(
               alignment: Alignment.centerLeft,
-              child: Icon(
-                Icons.arrow_back_ios_new,
-                size: MediaQuery.of(context).size.height * 0.05,
+              child: IconButton(
+                icon: Icon(Icons.arrow_back_ios_new),
+                iconSize: MediaQuery.of(context).size.height * 0.05,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => WelcomeUi(),
+                    ),
+                  );
+                },
               ),
             ),
             Align(
@@ -180,9 +189,10 @@ class _LoginUiState extends State<LoginUi> {
                       color: Colors.blue,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
+                      
                     ),
                   ),
-                ),
+                )
               ],
             ),
           ],
