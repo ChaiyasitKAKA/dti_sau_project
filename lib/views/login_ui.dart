@@ -1,5 +1,5 @@
-// ignore_for_file: sort_child_properties_last
 
+import 'package:dti_sau_project/views/signup_ui.dart';
 import 'package:flutter/material.dart';
 
 class LoginUi extends StatefulWidget {
@@ -33,7 +33,7 @@ class _LoginUiState extends State<LoginUi> {
             Align(
               alignment: Alignment.centerLeft,
               child: Image.asset(
-                'assets/images/logo.png', // Correct image path
+                'assets/images/logo.png', 
                 width: MediaQuery.of(context).size.width * 0.5,
               ),
             ),
@@ -101,12 +101,6 @@ class _LoginUiState extends State<LoginUi> {
             ),
             ElevatedButton(
               onPressed: () {},
-              child: Text(
-                'LOGIN',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.black,
                 fixedSize: Size(
@@ -117,13 +111,19 @@ class _LoginUiState extends State<LoginUi> {
                   borderRadius: BorderRadius.circular(0.5),
                 ),
               ),
+              child: Text(
+                'LOGIN',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
             Text(
               'OR',
-              textAlign: TextAlign.center, // Center 'OR'
+              textAlign: TextAlign.center, 
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
@@ -167,8 +167,12 @@ class _LoginUiState extends State<LoginUi> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // Add navigation to the SignUp page here
-                    print("Signup tapped!");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignupUi(),
+                      ),
+                    );
                   },
                   child: Text(
                     'Sign Up',

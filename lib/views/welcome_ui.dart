@@ -61,7 +61,6 @@ class _WelcomeUiState extends State<WelcomeUi> {
                           builder: (context) => LoginUi(),
                         ));
                   },
-                  child: Text('LOGIN'),
                   style: OutlinedButton.styleFrom(
                     fixedSize: Size(
                       MediaQuery.of(context).size.width * 0.3,
@@ -71,6 +70,7 @@ class _WelcomeUiState extends State<WelcomeUi> {
                       borderRadius: BorderRadius.circular(0.5),
                     ),
                   ),
+                  child: Text('LOGIN'),
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.05,
@@ -84,12 +84,6 @@ class _WelcomeUiState extends State<WelcomeUi> {
                       ),
                     );
                   },
-                  child: Text(
-                    'SIGNUP',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
                     fixedSize: Size(
@@ -98,6 +92,12 @@ class _WelcomeUiState extends State<WelcomeUi> {
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(0.5),
+                    ),
+                  ),
+                  child: Text(
+                    'SIGNUP',
+                    style: TextStyle(
+                      color: Colors.white,
                     ),
                   ),
                 ),
