@@ -14,96 +14,98 @@ class _WelcomeUiState extends State<WelcomeUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.amber,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.width * 0.125,
-            ),
-            Image.asset(
-              'assets/images/logo.png',
-              width: MediaQuery.of(context).size.width * 0.65,
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.width * 0.125,
-            ),
-            Text(
-              'DTI SAU APP 2023',
-              style: TextStyle(
-                fontSize: MediaQuery.of(context).size.width * 0.06,
-                fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.125,
               ),
-            ),
-            Text(
-              'Created by kakalamand DTI SAU',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
+              Image.asset(
+                'assets/images/logo.png',
+                width: MediaQuery.of(context).size.width * 0.65,
               ),
-            ),
-            Text(
-              'luv luv luv luv luv luv luv luv ',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.125,
               ),
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.width * 0.125,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                OutlinedButton(
-                  onPressed: () {
-                    Navigator.push(
+              Text(
+                'DTI SAU APP 2023',
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.06,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Created by kakalamand DTI SAU',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'luv luv luv luv luv luv luv luv ',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.125,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  OutlinedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginUi(),
+                          ));
+                    },
+                    style: OutlinedButton.styleFrom(
+                      fixedSize: Size(
+                        MediaQuery.of(context).size.width * 0.3,
+                        MediaQuery.of(context).size.height * 0.05,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(0.5),
+                      ),
+                    ),
+                    child: Text('LOGIN'),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.05,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => LoginUi(),
-                        ));
-                  },
-                  style: OutlinedButton.styleFrom(
-                    fixedSize: Size(
-                      MediaQuery.of(context).size.width * 0.3,
-                      MediaQuery.of(context).size.height * 0.05,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0.5),
-                    ),
-                  ),
-                  child: Text('LOGIN'),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.05,
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SignupUi(),
+                          builder: (context) => SignupUi(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      fixedSize: Size(
+                        MediaQuery.of(context).size.width * 0.3,
+                        MediaQuery.of(context).size.height * 0.05,
                       ),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black,
-                    fixedSize: Size(
-                      MediaQuery.of(context).size.width * 0.3,
-                      MediaQuery.of(context).size.height * 0.05,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(0.5),
+                      ),
                     ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0.5),
-                    ),
-                  ),
-                  child: Text(
-                    'SIGNUP',
-                    style: TextStyle(
-                      color: Colors.white,
+                    child: Text(
+                      'SIGNUP',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
