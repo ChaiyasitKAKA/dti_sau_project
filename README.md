@@ -1,16 +1,13 @@
-# dti_sau_project
+# Flutter project : dti_sau_project
+## UI project หน้าจอ  Welcome, Loigin , and Signup (ยังไม้ได้ทำโต้ดการทำงาน)
+<img src="https://github.com/user-attachments/assets/84b8cc9b-5f01-41ea-8ef3-001bc0eb7c24">
 
-A new Flutter project.
+<img src="https://github.com/user-attachments/assets/a2bbf227-0401-4341-8161-87390877a56d">
 
-## Getting Started
+<img src="https://github.com/user-attachments/assets/dcea6c57-a335-4247-b2a8-4a7f9c48dd50">
 
-This project is a starting point for a Flutter application.
+![image](https://github.com/user-attachments/assets/84b8cc9b-5f01-41ea-8ef3-001bc0eb7c24)
 
-A few resources to get you started if this is your first Flutter project:
+![image](https://github.com/user-attachments/assets/a2bbf227-0401-4341-8161-87390877a56d)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/user-attachments/assets/dcea6c57-a335-4247-b2a8-4a7f9c48dd50)
